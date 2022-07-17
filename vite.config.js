@@ -31,29 +31,30 @@ export default defineConfig({
   // 打包
   build: {
     // 解决 npm打包的时候报 isCE 的错误
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        globals: {
-          vue: "Vue"
-        }
-      }
-    },
-    lib: {
-      entry: './packages/index.js', // 打包入口文件
-      name: 'fluiv3'
-    },
-    chunkSizeWarningLimit:1500,
     // rollupOptions: {
-    //     output:{
-    //         manualChunks(id) {
-    //           if (id.includes('node_modules')) {
-    //               return id.toString().split('node_modules/')[1].split('/')[0].toString();
-    //           }
-    //       }
+    //   external: ["vue"],
+    //   output: {
+    //     globals: {
+    //       vue: "Vue"
     //     }
+    //   }
     // },
-    // outDir: 'docs'
+    // lib: {
+    //   entry: './packages/index.js', // 打包入口文件
+    //   name: 'fluiv3'
+    // },
+    // chunkSizeWarningLimit: 1500,
+    // 组件库文档部署上线打包
+    rollupOptions: {
+        output:{
+            manualChunks(id) {
+              if (id.includes('node_modules')) {
+                  return id.toString().split('node_modules/')[1].split('/')[0].toString();
+              }
+          }
+        }
+    },
+    outDir: 'docs'
   },
   // 路径
   resolve: {

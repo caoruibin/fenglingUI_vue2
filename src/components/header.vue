@@ -34,12 +34,12 @@ const state = reactive({
     {
       name: "组件",
       path: "/home",
+    },
+    {
+      name: "GitHub",
+      path: "open",
+      url: "https://github.com/caoruibin/fenglingUI_vue2"
     }
-    // {
-    //   name: "GitHub",
-    //   path: "open",
-    //   url: "https://github.com/wangibook/my-baseui"
-    // }
   ],
 });
 const { tools } = state;

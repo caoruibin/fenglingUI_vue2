@@ -8,8 +8,4 @@
   <l-button type="danger">危险按钮</l-button>
 </template>
 <style lang='scss' scoped>
-// .container {
-//   display: flex;
-//   justify-content: space-between;
-// }
 </style>

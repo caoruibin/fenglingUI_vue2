@@ -47,13 +47,12 @@ import { onMounted } from '@vue/runtime-core';
 import { useRouter } from "vue-router";
 const router = useRouter();
 const goComponents = () => {
-  // router.push("/home");
-  router.push("/button2");
+  router.push("/home");
+  // router.push("/button2");
   sessionStorage.setItem("nIndex", '1');
 }
 const goGitHub = () => {
-  console.log('github---');
-  // window.open("https://github.com/wangibook/my-baseui");
+  window.open("https://github.com/caoruibin/fenglingUI_vue2");
 }
 
 onMounted(() => {

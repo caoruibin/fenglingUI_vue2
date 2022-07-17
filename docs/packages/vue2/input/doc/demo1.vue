@@ -23,10 +23,5 @@ export default {
   },
 };
 </script>
-
-<!-- <script setup>
-import { ref } from "vue";
-const val = ref("");
-</script> -->
 <style lang='scss' scoped>
 </style>
