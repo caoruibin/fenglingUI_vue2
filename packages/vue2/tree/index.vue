@@ -39,23 +39,6 @@ export default {
   },
 };
 </script>
-<!-- <script setup>
-import { ref } from "vue";
-const val = ref("");
-const props = defineProps({
-  options: {
-    type: Array,
-    default: () => [],
-  },
-});
-const isShow = ref(false);
-const newOptions = ref(props.options);
-const isOpen = (item) => {
-  item.isOpened = !item.isOpened;
-  //   isShow.value = !isShow.value;
-};
-console.log("@isShow", isShow);
-</script> -->
 <style lang='scss' scoped>
 .slide-fade-enter-active {
   transition: all 0.3s ease-out;
@@ -68,5 +51,10 @@ console.log("@isShow", isShow);
   // 左右动画
   transform: translateX(20px);
   opacity: 0;
+}
+.container{
+  li{
+    padding-left: 20px;
+  }
 }
 </style>

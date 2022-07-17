@@ -30,7 +30,7 @@ export default {
 };
 </script>
 <script setup>
-import { ref, reactive, toRefs, onMounted } from "vue";
+import { ref, reactive, onMounted } from "vue";
 import fButton from "../button/index.vue";
 const emit = defineEmits(["update:files", "change"]);
 const props = defineProps({

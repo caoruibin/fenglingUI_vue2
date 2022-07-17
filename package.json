@@ -1,7 +1,8 @@
 {
-  "name": "fenglingUI_vue2",
+  "name": "fluiv3",
   "private": false,
-  "version": "0.0.1",
+  "author": "caoruibin",
+  "version": "0.0.8",
   "main": "./dist/fluiv3.umd.js",
   "moudle": "./dist/fluiv3.es.js",
   "exports": {
@@ -21,6 +22,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "fluiv3": "0.0.6",
     "highlight.js": "^11.5.1",
     "vite-plugin-md": "^0.12.4",
     "vue-router": "^4.0.14"

@@ -51,4 +51,9 @@ console.log("@isShow", isShow);
   transform: translateX(20px);
   opacity: 0;
 }
+.container{
+  li{
+    padding-left: 20px;
+  }
+}
 </style>

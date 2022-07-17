@@ -8,7 +8,7 @@
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import Markdown, { link, meta } from 'vite-plugin-md'
+import Markdown from 'vite-plugin-md'
 import { resolve } from 'path'
 /************************************* 路径配置 start ********************************/
 const pathResolve = (dir) => {
@@ -27,37 +27,33 @@ export default defineConfig({
         include: [/\.md$/, /\.vue/],
       }
     ),
-    Markdown(
-      // {
-      //   builders: [link(), meta()],
-      // }
-    )],
+    Markdown()],
   // 打包
   build: {
     // 解决 npm打包的时候报 isCE 的错误
-    // rollupOptions: {
-    //   external: ["vue"],
-    //   output: {
-    //     globals: {
-    //       vue: "Vue"
-    //     }
-    //   }
-    // },
-    // lib: {
-    //   entry: './packages/index.js', // 打包入口文件
-    //   name: 'fl-uiv3'
-    // }
-    chunkSizeWarningLimit:1500,
     rollupOptions: {
-        output:{
-            manualChunks(id) {
-              if (id.includes('node_modules')) {
-                  return id.toString().split('node_modules/')[1].split('/')[0].toString();
-              }
-          }
+      external: ["vue"],
+      output: {
+        globals: {
+          vue: "Vue"
         }
+      }
     },
-    outDir: 'docs'
+    lib: {
+      entry: './packages/index.js', // 打包入口文件
+      name: 'fluiv3'
+    },
+    chunkSizeWarningLimit:1500,
+    // rollupOptions: {
+    //     output:{
+    //         manualChunks(id) {
+    //           if (id.includes('node_modules')) {
+    //               return id.toString().split('node_modules/')[1].split('/')[0].toString();
+    //           }
+    //       }
+    //     }
+    // },
+    // outDir: 'docs'
   },
   // 路径
   resolve: {
@@ -73,6 +69,7 @@ export default defineConfig({
       scss: {
         additionalData: '@use "./src/assets/styles/style.scss" as *;'
       }
-    }
+    },
+    extract: true,
   }
 })
