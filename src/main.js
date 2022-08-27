@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import FUI from '../packages/index'
+// 引入全局样式
+import './styles/index.scss';
+import '~/iconfont/iconfont.css';
 // import FUI from 'fluiv3'
 // import '../node_modules/fluiv3/dist/style.css';
 // import 'fluiv3/dist/style.css';

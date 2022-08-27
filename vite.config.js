@@ -10,13 +10,18 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Markdown from 'vite-plugin-md'
 import { resolve } from 'path'
+
+// function pathResolve(dir){
+//   return resolve(process.cwd(), '.', dir)
+// };
 /************************************* 路径配置 start ********************************/
 const pathResolve = (dir) => {
   return resolve(__dirname, ".", dir)
 }
 
 const alias = {
-  '@': pathResolve("src")
+  '@': pathResolve("src"),
+  '~': pathResolve("packages")
 }
 export default defineConfig({
   // base: './',
@@ -46,13 +51,13 @@ export default defineConfig({
     // chunkSizeWarningLimit: 1500,
     // 组件库文档部署上线打包
     rollupOptions: {
-        output:{
-            manualChunks(id) {
-              if (id.includes('node_modules')) {
-                  return id.toString().split('node_modules/')[1].split('/')[0].toString();
-              }
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
           }
         }
+      }
     },
     outDir: 'docs'
   },
@@ -72,5 +77,11 @@ export default defineConfig({
       }
     },
     extract: true,
+  },
+  // 配置启动端口
+  server: {
+    host: '0.0.0.0', //ip地址
+    port: 8080, //端口号
+    open: true //启动后是否自动打开浏览器
   }
 })

@@ -31,17 +31,17 @@ export const vue2Component = [
         component: () => import("/packages/vue2/space/doc/space.md")
     },
     {
-        path: '/textarea',
+        path: '/textarea2',
         name: '文本域 Textarea-vue2',
         component: () => import("/packages/vue2/textarea/doc/textarea.md")
     },
     {
-        path: '/tree',
+        path: '/tree2',
         name: '树 Tree-vue2',
         component: () => import("/packages/vue2/tree/doc/tree.md")
     },
     {
-        path: '/upload',
+        path: '/upload2',
         name: '上传 Upload-vue2',
         component: () => import("/packages/vue2/upload/doc/upload.md")
     }

@@ -17,7 +17,18 @@ import fRadio from "./vue3/radio/index";
 import fTree from "./vue3/tree/index";
 import fUpload from "./vue3/upload/index";
 
-const components = [fButton, fInput, fTextarea, fSpace, fSelect, fRadio, fTree, fUpload, lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload]
+// m 组件
+import mButton from "./components/button/index";
+import mCol from "./components/col/index";
+import mRow from "./components/row/index";
+import mLink from "./components/link/index";
+import mSpace from "./components/space/index";
+
+// mButton,mCol,mRow,mLink,mSpace
+const components = [fButton, fInput, fTextarea, fSpace,
+    fSelect, fRadio, fTree, fUpload, lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload,
+    mButton, mCol, mRow, mLink, mSpace
+]
 const install = app => {
     components.forEach((item) => {
         app.use(item)
@@ -26,5 +37,10 @@ const install = app => {
 const FUI = {
     install,
 }
-export { fButton, fInput, fTextarea, fSpace, fSelect, fRadio, fTree, fUpload, lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload }
+// mButton,mCol,mRow,mLink,mSpace
+export {
+    fButton, fInput, fTextarea, fSpace, fSelect, fRadio, fTree, fUpload,
+    lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload,
+    mButton, mCol, mRow, mLink, mSpace
+}
 export default FUI
