@@ -23,6 +23,7 @@ import mCol from "./components/col/index";
 import mRow from "./components/row/index";
 import mLink from "./components/link/index";
 import mSpace from "./components/space/index";
+
 import mCheckbox from "./components/checkbox/index";
 import mCheckboxGroup from "./components/checkbox-group/index";
 import mCheckboxButton from "./components/checkbox-button/index";
@@ -35,11 +36,14 @@ import mSelect from "./components/select/index";
 import mSwitch from "./components/switch/index";
 import mTextarea from "./components/textarea/index";
 
+import mTag from "./components/tag/index";
+
 // mButton,mCol,mRow,mLink,mSpace
 const components = [fButton, fInput, fTextarea, fSpace,
     fSelect, fRadio, fTree, fUpload, lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload,
     mButton, mCol, mRow, mLink, mSpace,
-    mCheckbox,mCheckboxGroup,mCheckboxButton,mInput,mInputNumber,mRadio,mRadioGroup,mRadigButton,mSelect,mSwitch,mTextarea
+    mCheckbox,mCheckboxGroup,mCheckboxButton,mInput,mInputNumber,mRadio,mRadioGroup,mRadigButton,mSelect,mSwitch,mTextarea,
+    mTag
 ]
 const install = app => {
     components.forEach((item) => {
@@ -54,6 +58,7 @@ export {
     fButton, fInput, fTextarea, fSpace, fSelect, fRadio, fTree, fUpload,
     lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload,
     mButton, mCol, mRow, mLink, mSpace,
-    mCheckbox,mCheckboxGroup,mCheckboxButton,mInput,mInputNumber,mRadio,mRadioGroup,mRadigButton,mSelect,mSwitch,mTextarea
+    mCheckbox,mCheckboxGroup,mCheckboxButton,mInput,mInputNumber,mRadio,mRadioGroup,mRadigButton,mSelect,mSwitch,mTextarea,
+    mTag
 }
 export default FUI
