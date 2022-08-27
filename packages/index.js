@@ -38,12 +38,20 @@ import mTextarea from "./components/textarea/index";
 
 import mTag from "./components/tag/index";
 
+//Feedback 反馈组件
+import mAlert from "./components/alert/index";
+import mDialog from "./components/dialog/index";
+import mMessage from "./components/message/index";
+import mDrawer from "./components/drawer/index";
+
+
 // mButton,mCol,mRow,mLink,mSpace
 const components = [fButton, fInput, fTextarea, fSpace,
     fSelect, fRadio, fTree, fUpload, lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload,
     mButton, mCol, mRow, mLink, mSpace,
     mCheckbox,mCheckboxGroup,mCheckboxButton,mInput,mInputNumber,mRadio,mRadioGroup,mRadigButton,mSelect,mSwitch,mTextarea,
-    mTag
+    mTag,
+    mAlert,mDialog,mMessage,mDrawer
 ]
 const install = app => {
     components.forEach((item) => {
@@ -59,6 +67,7 @@ export {
     lButton, lInput, lRadio, lSelect, lSpace, lTextarea, lTree, lUpload,
     mButton, mCol, mRow, mLink, mSpace,
     mCheckbox,mCheckboxGroup,mCheckboxButton,mInput,mInputNumber,mRadio,mRadioGroup,mRadigButton,mSelect,mSwitch,mTextarea,
-    mTag
+    mTag,
+    mAlert,mDialog,mMessage,mDrawer
 }
 export default FUI
